@@ -1,0 +1,10 @@
+class Constants:
+    URL = 'https://stellarburgers.nomoreparties.site/api'
+    URL_USER = URL + '/auth'
+    URL_USER_REG = URL_USER + '/register'
+    URL_LOGIN = URL_USER + '/login'
+    URL_LOGOUT = URL_USER + '/logout'
+    URL_UPDATE_TOKEN = URL_USER + '/token'
+    URL_USER_DATA_CHANGE = URL_USER + '/user'
+    URL_ORDERS = URL + '/orders'
+    URL_INGREDIENTS = URL + '/ingredients'
