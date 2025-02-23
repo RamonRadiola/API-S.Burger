@@ -7,8 +7,10 @@ import allure
 @allure.story("Проверяет ручку 'Авторизация пользователя'")
 class TestCreateUser:
     @allure.title("Проверка логина c передачей валидных данных")
-    def test_login_user(self, login_user):
-        response_login = login_user[0]
+    def test_login_user(self, reg_user):
+        data = reg_user[1]
+        response_login = reg_user[0]
+        requests.post(Constants.URL_LOGIN, json=data)
         assert 200 == response_login.status_code
         assert response_login.json()["success"] is True
 
