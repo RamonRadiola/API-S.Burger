@@ -4,7 +4,7 @@ from faker import Faker
 
 @allure.story("Генерирует данные для регистрации нового курьера")
 class GenDataUser:
-    @allure.title("Генерирует данные для регистрации нового пользователя и возвращает их в словарь payload")
+    @allure.step("Генерирует данные для регистрации нового пользователя и возвращает их в словарь payload")
     def generate_data_for_register_new_user():
         fake = Faker("en_US")
         email = fake.email()
